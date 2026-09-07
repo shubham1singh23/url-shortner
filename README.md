@@ -173,13 +173,7 @@ npm install && npm run dev    # http://localhost:5173
 No environment variables are required for local dev — every config value
 falls back to the local defaults in `application.properties`.
 
-## Deploying it
 
-See [`DEPLOYMENT.md`](DEPLOYMENT.md) for the full walkthrough — Postgres
-and Redis on Render, Kafka on Confluent Cloud, the API as a Render Web
-Service (Docker), and the frontend on Vercel.
-
----
 
 ## What I'd add next
 
