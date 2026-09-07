@@ -1,0 +1,131 @@
+/* ---------------------------------------------------------------------
+   Beacon — design tokens
+   A link shortener framed as a beacon: you send a short signal out,
+   and see every time someone follows it back.
+--------------------------------------------------------------------- */
+
+:root {
+  --ink: #0e1317;
+  --ink-raised: #141a1f;
+  --panel: #171e24;
+  --panel-raised: #1d252c;
+  --border: #262f37;
+  --border-soft: #1f272e;
+
+  --text: #eceef0;
+  --text-muted: #93a0aa;
+  --text-faint: #5c6971;
+
+  --amber: #ffb238;
+  --amber-soft: #ffb23822;
+  --amber-dim: #c98a2a;
+
+  --teal: #5fd9c0;
+  --teal-soft: #5fd9c022;
+
+  --red: #ff7a68;
+  --red-soft: #ff7a6822;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Sparse radar-field texture — a nod to signal broadcast, kept very quiet */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(circle, rgba(255, 178, 56, 0.055) 1px, transparent 1.4px);
+  background-size: 34px 34px;
+  background-position: -8px -8px;
+  mask-image: radial-gradient(ellipse 70% 55% at 30% 15%, black 0%, transparent 75%);
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-soft);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Scrollbar, kept quiet and in-theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
