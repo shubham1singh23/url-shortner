@@ -192,8 +192,4 @@ Being upfront about scope also means being upfront about what's out of it:
 
 ---
 
-<div align="center">
 
-Built by [Shubham](https://github.com/your-username) — [LinkedIn](#) · [Portfolio](#)
-
-</div>
