@@ -13,7 +13,7 @@
 [![Deployed on Render](https://img.shields.io/badge/Backend-Render-46E3B7?style=flat)](#)
 [![Deployed on Vercel](https://img.shields.io/badge/Frontend-Vercel-000000?style=flat&logo=vercel&logoColor=white)](#)
 
-[Live demo](#) · [API reference](#api-reference) · [Architecture](#architecture)
+ [API reference](#api-reference) · [Architecture](#architecture)
 
 </div>
 
